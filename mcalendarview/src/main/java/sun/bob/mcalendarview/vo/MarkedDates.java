@@ -26,6 +26,7 @@ public class MarkedDates extends Observable {
     }
 
     public boolean remove(DateData date){
+         this.setChanged(); // #bug fixed for not updating the view after unmarking the date
         return data.remove(date);
     }
 
